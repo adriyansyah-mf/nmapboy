@@ -71,6 +71,7 @@ menu () {
 	echo -e "${merah}[12]${dasar}${ijo}IIS WEBDAV VULN SCANNER ${dasar}"
 	echo -e "${merah}[13]${dasar}${ijo}HTTP ENUM ${dasar}"
 	echo -e "${merah}[14]${dasar}${ijo}DOUBLEPULSAR SCANNER (ms17-010) ${dasar}"
+	echo -e "${merah}[15]${dasar}${ijo}HEARTBLEED SCANNER ${dasar}"
 
 
 }
@@ -231,6 +232,17 @@ clear
     clear
 	menuutama
 }
+menu15 () {
+clear
+	echo "${biru}Insert Your Target : ${dasar}"
+	read target14
+	sleep 2
+	$jendela -sV -p 443 --script=ssl-heartbleed $target
+    
+    clear
+	menuutama
+}
+
 
 
 
@@ -259,6 +271,7 @@ menuutama () {
 	12) menu12;;
 	13) menu13;;
 	14) menu14;;
+	15) menu15;;
     *) menuutamana;;
 
 
